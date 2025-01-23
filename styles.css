@@ -847,3 +847,48 @@ nav {
     padding: 2rem;
   }
 }
+
+/* Banner Container Styles */
+.s-banner-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black; /* Soft pink background */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+}
+
+/* Banner Styles */
+.s-banner {
+  display: flex;
+  animation: moveBanner 20s linear infinite; /* Infinite scrolling animation */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Text Styles */
+.s-banner span {
+  font-size: 18px; /* Text size */
+  padding: 0 20px; /* Space between items */
+  color: white; /* Eye-catching pink */
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes moveBanner {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .s-banner span {
+    font-size: 15px; /* Smaller text for mobile */
+    padding: 0 10px; /* Reduce spacing */
+  }
+}
+
